@@ -7,6 +7,7 @@ styleUrls: ['./home.component.scss']
 export class HomeComponent implements OnInit {
  logros : ILogro[];
  titulo  : string = 'Bienvenidos';
+ saludos: string = 'Caballeros';
  constructor() { }
  ngOnInit() {
  this.logros = this.getLogros();

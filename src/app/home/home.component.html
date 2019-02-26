@@ -1,8 +1,13 @@
-{{titulo}}
+{{titulo}} {{saludos}}
+<div class="content">
 <ul>
+  <h1>Home</h1>
+
   <li *ngFor="let logro of logros">
     {{logro.title}}
     {{logro.description}}
   </li>
 
 </ul>
+
+</div>
