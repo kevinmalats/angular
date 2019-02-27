@@ -20,9 +20,9 @@ export class BotonExploreComponent implements OnInit {
 
             if ($target.length) {
 
-                var targetOffset = $target.offset().top;
+                var targetOffset = $target.offset().top + 40;
 
-                $('html,body').animate({scrollTop: targetOffset}, 1000);
+                $('html,body').animate({scrollTop: targetOffset}, 700);
 
                 return false;
 

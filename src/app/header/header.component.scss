@@ -49,8 +49,13 @@ background-image: url("/assets/img/sol.PNG");
 .link{
   float: right;
 }
+.resp-menu.active {
+    position: fixed;
+    z-index: 20;
+}
 .despMen{
   height: 3px;
+
   right: 0;
   background-color: black;
   position: absolute;
@@ -83,6 +88,28 @@ width: 100%;
   font-size: 80px;
 
 }
+.logo{
+  
+  z-index: 20;
+
+}
+.logo img {
+
+
+
+}
+.navegacion ul>a>li:hover{
+  color: yellow;
+  animation: movimiento 1s linear ;
+}
+@keyframes movimiento{
+  from{
+    transform: rotateX(0deg);
+  } to{
+    transform: rotateX(12deg);
+  }
+}
+
 
 .navegacion ul>a{text-decoration: none;}
 
