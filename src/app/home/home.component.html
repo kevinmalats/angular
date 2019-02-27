@@ -1,11 +1,12 @@
-{{titulo}} {{saludos}}
+
 <div class="content">
 <ul>
-  <h1>Home</h1>
 
-  <li *ngFor="let logro of logros">
-    {{logro.title}}
-    {{logro.description}}
+
+  <li *ngFor="let logro of logros" class="mat-card">
+    <h1>  {{logro.title}}</h1>
+    <p>{{logro.description}}</p>
+    <img src="{{logro.img}}" alt="">
   </li>
 
 </ul>
