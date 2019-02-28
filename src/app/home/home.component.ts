@@ -13,9 +13,85 @@ export class HomeComponent implements OnInit {
  ngOnInit() {
  this.logros = this.getLogros();
  let elemen=$("#elementos");
+<<<<<<< HEAD
+=======
+
+ jQuery(document).ready(function($){
+
+ $('.content ').mouseenter(function(){
+   $('ul', this).fadeIn(300);
+ }).mouseleave(function(){
+   $('h1', this).fadeOut(300);
+ })
+
+ // ---------------------------------------------------
+ // animaciones
+ // ---------------------------------------------------
+ var windowH = $(window).height();
+ var animPos = new Array();
+ var i = 0;
+
+ // array con todas las posiciones de las secciones a animar
+ $('.animate').each(function(){
+   var $this = $(this);
+   $this.data('finished',false);
+  var  distancia = $this.offset();
+   animPos[i] = distancia.top - (windowH / 2);
+   i++;
+ })
+
+ $(window).scroll(function(){
+  var scrolled = $(document).scrollTop();
+   var j = 0;
+   $('.animate').each(function(){
+     var $this = $(this);
+     if( scrolled > animPos[j] && !$this.data('finished') ){
+       $this.trigger('geckocodeAnimate');
+       $this.data('finished',true);
+     }
+     j++;
+   })
+ })
+
+
+ $('#elementos .animate').on('geckocodeAnimate', function(){
+
+   $(this).prepend('<span class="dot-line"></span>');
+   $(this).find('.dot-line').animate({width:'75%'}, 5000, 'linear');
+ })
+/*
+ $('#estrategia-anim').on('geckocodeAnimate', function(){
+   $(this).prepend('<span class="dot-line"></span>');
+   $(this).find('.dot-line').animate({width:'68%'}, 2500, 'linear');
+ })
+
+ $('#branding-anim').on('geckocodeAnimate', function(){
+   $(this).prepend('<span id="cd"></span>');
+   $(this).find('img.fadein').fadeIn(800);
+   $(this).find('#cd').animate({left:'+=35'}, 800);
+ })
+
+ $('#dis-web-anim').on('geckocodeAnimate', function(){
+   $(this).find('img.fadein').fadeIn(800);
+ })
+
+ $('#social-anim').on('geckocodeAnimate', function(){
+   $(this).find('img').animate({'opacity':1}, 800);
+ })
+
+ $('#espai-anim').on('geckocodeAnimate', function(){
+   $(this).prepend('<span id="chairs-top"/><span id="chairs-bottom"/>');
+   $(this).find('#chairs-top').animate({top:'-=55'}, 800, 'linear');
+   $(this).find('#chairs-bottom').animate({bottom:'-=55'}, 800, 'linear');
+ })
+*/
+
+ });
+>>>>>>> dbee646f23ad2d350e0498744033146e28c07d59
 
 
 
+<<<<<<< HEAD
  jQuery(document).ready(function($){
 
  $('header .menu .amb-submenu').mouseenter(function(){
@@ -90,6 +166,9 @@ export class HomeComponent implements OnInit {
  }
 
 
+=======
+
+>>>>>>> dbee646f23ad2d350e0498744033146e28c07d59
 
  getLogros() : ILogro[]{
   return [{
