@@ -15,14 +15,14 @@ export class HomeComponent implements OnInit {
  let elemen=$("#elementos");
 
  jQuery(document).ready(function($){
-     $("#elementos").mousemove(function(event){
-    		var x = event.pageX - this.offsetLeft;
-    		var y = event.pageY - this.offsetTop;
-        	$("#texto3").text("Coordenadas del ratón dentro del elemento: " + x + ", " + y);
-    	});
-let pos= $(".oculto").offset();
+   let pos= 450;
+   var posy;
+
+
    $( window ).scroll(function() {
-  $( "#elementos" ).show("slow");
+      var scrollTop = $(window).scrollTop();
+      if(pos<=scrollTop)
+       $( "#elementos" ).show("slow");
 
 //  $( "#elementos" ).css( "float", "left" );
 });
